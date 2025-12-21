@@ -794,6 +794,126 @@
             background: var(--slate-300);
             border-radius: 10px;
         }
+
+        /* ====== Melhorias Globais ====== */
+
+/* animação suave em todo hover */
+*,
+button,
+input,
+textarea {
+  transition: all .25s ease-in-out;
+}
+
+/* suavizar cores do fundo amarelo */
+body {
+  background: linear-gradient(120deg, #ffe14a, #ffd93b, #ffca2c);
+  animation: bgShift 8s infinite alternate ease-in-out;
+}
+
+@keyframes bgShift {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.1); }
+}
+
+/* melhora legibilidade em painéis brancos */
+.glass,
+.bg-white,
+.bg-white\/80,
+.bg-white\/95 {
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.08),
+    0 8px 24px rgba(0,0,0,.04);
+  backdrop-filter: blur(18px);
+}
+
+/* animação ao revelar blocos na rolagem */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .6s cubic-bezier(.19,1,.22,1);
+}
+
+/* cards com hover mais premium */
+.category-card,
+article,
+.professional-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.category-card:hover,
+article:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.12),
+    0 15px 35px rgba(79,70,229,.15);
+}
+
+/* brilho suave no hover do botão */
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+/* ====== Borda Animada Premium ====== */
+.category-card::before,
+article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg,#4f46e5,#f43f5e,#10b981);
+  -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.category-card:hover::before,
+article:hover::before {
+  opacity: .8;
+}
+
+/* ====== Scrollbar Premium ======= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a8aec1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d7391;
+}
+
+/* ====== animações sutis em emojis ====== */
+button span,
+.category-card span,
+header span {
+  display: inline-block;
+}
+
+button:hover span,
+.category-card:hover span {
+  transform: translateX(2px) scale(1.05);
+}
+
+/* ====== responsividade refinada ====== */
+@media (min-width:1024px){
+  main {
+    max-width: 1200px;
+  }
+}
+
     </style>
 </head>
 <body>
