@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domestika Connect</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <style>
         * {
@@ -794,126 +795,6 @@
             background: var(--slate-300);
             border-radius: 10px;
         }
-
-        /* ====== Melhorias Globais ====== */
-
-/* animação suave em todo hover */
-*,
-button,
-input,
-textarea {
-  transition: all .25s ease-in-out;
-}
-
-/* suavizar cores do fundo amarelo */
-body {
-  background: linear-gradient(120deg, #ffe14a, #ffd93b, #ffca2c);
-  animation: bgShift 8s infinite alternate ease-in-out;
-}
-
-@keyframes bgShift {
-  0% { filter: brightness(1); }
-  100% { filter: brightness(1.1); }
-}
-
-/* melhora legibilidade em painéis brancos */
-.glass,
-.bg-white,
-.bg-white\/80,
-.bg-white\/95 {
-  box-shadow:
-    0 4px 12px rgba(0,0,0,.08),
-    0 8px 24px rgba(0,0,0,.04);
-  backdrop-filter: blur(18px);
-}
-
-/* animação ao revelar blocos na rolagem */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all .6s cubic-bezier(.19,1,.22,1);
-}
-
-/* cards com hover mais premium */
-.category-card,
-article,
-.professional-card {
-  overflow: hidden;
-  position: relative;
-}
-
-.category-card:hover,
-article:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.12),
-    0 15px 35px rgba(79,70,229,.15);
-}
-
-/* brilho suave no hover do botão */
-button:hover:not(:disabled) {
-  filter: brightness(1.1);
-}
-
-/* ====== Borda Animada Premium ====== */
-.category-card::before,
-article::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 2px;
-  background: linear-gradient(45deg,#4f46e5,#f43f5e,#10b981);
-  -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude; 
-  opacity: 0;
-  transition: opacity .4s ease;
-}
-
-.category-card:hover::before,
-article:hover::before {
-  opacity: .8;
-}
-
-/* ====== Scrollbar Premium ======= */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-thumb {
-  background: #a8aec1;
-  border-radius: 20px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #6d7391;
-}
-
-/* ====== animações sutis em emojis ====== */
-button span,
-.category-card span,
-header span {
-  display: inline-block;
-}
-
-button:hover span,
-.category-card:hover span {
-  transform: translateX(2px) scale(1.05);
-}
-
-/* ====== responsividade refinada ====== */
-@media (min-width:1024px){
-  main {
-    max-width: 1200px;
-  }
-}
-
     </style>
 </head>
 <body>
@@ -1103,9 +984,9 @@ button:hover span,
                 <div class="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
                     <div class="max-w-xl w-full text-center space-y-12 relative z-10 transition-page">
                         <div class="space-y-4">
-                            <div class="flex items-center gap-3 bg-white/30 backdrop-blur-md px-6 py-2 rounded-full border border-white/40 shadow-xl mx-auto w-fit">
+                            <div class="textPremiun flex items-center gap-3 bg-white/30 backdrop-blur-md px-6 py-2 rounded-full border border-white/40 shadow-xl mx-auto w-fit ">
                                 <span class="text-xl">✨</span>
-                                <span class="text-xs font-black uppercase tracking-[3px] text-indigo-950">Premium Home Services</span>
+                                <span class="text-xs font-black uppercase tracking-[3px] text-indigo-950 ">Premium Home Services</span>
                             </div>
                             <h1 class="text-6xl md:text-8xl font-black text-indigo-950 tracking-tighter leading-none">
                                 DOMESTIKA<br/><span class="text-white drop-shadow-lg">CONNECT</span>
@@ -1115,7 +996,7 @@ button:hover span,
                             </p>
                         </div>
 
-                        <button id="enter-app" class="group relative bg-indigo-600 text-white px-10 py-6 rounded-[2.5rem] font-black text-xl shadow-[0_25px_50px_rgba(79,70,229,0.4)] hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 btn-animate">
+                        <button id="enter-app" class="btn-entrada">
                             EXPLORAR CATEGORIAS
                             <span class="ml-3 group-hover:ml-5 transition-all">➔</span>
                         </button>
@@ -1150,15 +1031,15 @@ button:hover span,
                             <div class="w-8 h-8 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
                                 <span class="text-white text-xs font-bold">✨</span>
                             </div>
-                            <h1 class="text-lg font-black tracking-tighter text-indigo-950">DOMESTIKA</h1>
+                            <h1 class="text-lg font-black tracking-tighter text-indigo-950">DK</h1>
                         </div>
                         
                         <div class="flex items-center gap-2">
                             ${renderBalanceCartSmall()}
-                            <button id="mobile-service-btn" class="bg-indigo-600 text-white px-3 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-wider btn-animate">
+                            <button id="mobile-service-btn" class="servicos">
                                 Serviços
                             </button>
-                            <button id="mobile-menu-toggle" class="p-2 bg-slate-100 rounded-xl transition-colors btn-animate">
+                            <button id="mobile-menu-toggle" class="p-2 bg-slate-100 rounded-full border1 transition-colors btn-animate">
                                 <span class="text-slate-700 text-lg font-bold leading-none">${state.isMobileMenuOpen ? '✕' : '☰'}</span>
                             </button>
                         </div>
@@ -1211,7 +1092,7 @@ button:hover span,
                     </main>
                     
                     <!-- Mobile Bottom Navigation Bar -->
-                    <nav class="md:hidden glass fixed bottom-5 left-5 right-5 border border-white/40 px-6 py-2 flex justify-between items-center z-50 rounded-[2rem] shadow-[0_20px_50px_rgba(79,70,229,0.2)]">
+                    <nav class="navbarinferior">
                         <button data-tab="explorar" class="p-4 rounded-2xl transition-all btn-animate ${state.activeTab === 'explorar' || state.activeTab === 'categorias' || state.activeTab === 'solicitar' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-400'}">
                             <span class="text-xl">🧭</span>
                         </button>
@@ -1231,7 +1112,7 @@ button:hover span,
 
         function renderBalanceCartSmall() {
             return `
-                <button id="balance-cart" class="flex items-center gap-1.5 bg-white border border-slate-100 px-2.5 py-1.5 rounded-xl shadow-sm hover:border-indigo-400 transition-all btn-animate" title="Ver Saldo e Perfil">
+                <button id="balance-cart" class="carrinho" title="Ver Saldo e Perfil">
                     <span class="text-sm">🛒</span>
                     <span class="text-[11px] font-black text-slate-900 leading-none">${state.user?.points || 0}</span>
                 </button>
@@ -1331,80 +1212,100 @@ button:hover span,
         }
 
         function renderFeed() {
-            return `
-                <div class="max-w-2xl mx-auto space-y-8">
-                    <!-- Dynamic Intro -->
-                    <div class="bg-indigo-950 text-white rounded-[2.5rem] p-8 shadow-2xl shadow-indigo-200 relative overflow-hidden btn-animate border border-white/10">
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="text-lg">✨</span>
-                                <span class="text-xs font-black uppercase tracking-[2px] text-indigo-300">Destaque Semanal</span>
+    return `
+        <div class="max-w-2xl mx-auto space-y-8 pt-6 pb-24">
+
+            <!-- Dynamic Intro -->
+            <div class="bg-indigo-950 text-white rounded-[2.5rem] p-8 shadow-2xl shadow-indigo-200 relative overflow-hidden 
+                        btn-animate border border-white/10 animate-fade-in">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-lg animate-pulse">✨</span>
+                        <span class="text-xs font-black uppercase tracking-[2px] text-indigo-300">Destaque Semanal</span>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">Sua casa, um novo conceito.</h3>
+                    <p class="text-indigo-200/70 text-sm font-light leading-relaxed mb-6">
+                        Explore o portfólio dos melhores profissionais do mercado.
+                    </p>
+                    <button id="view-categories" 
+                        class="bg-white text-indigo-950 px-6 py-2.5 rounded-xl font-black text-xs uppercase tracking-wider 
+                               btn-animate shadow-xl shadow-white/5 hover:shadow-indigo-500/30 hover:-translate-y-1 transition">
+                        Ver Todas Categorias
+                    </button>
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div>
+                <div class="absolute top-0 right-0 p-8 text-6xl opacity-10 select-none">🏠</div>
+            </div>
+
+            <!-- Posts List -->
+            <div class="space-y-10">
+                ${MOCK_POSTS.map(post => `
+                    <article class="bg-gradient-to-br from-white/95 to-slate-50/90 backdrop-blur-xl rounded-[2rem] overflow-hidden 
+                                     shadow-[0_12px_45px_rgba(0,0,0,0.06)] border border-white/20 group 
+                                     hover:shadow-[0_25px_60px_rgba(79,70,229,0.18)] hover:-translate-y-1 transition-all duration-500">
+
+                        <!-- Header Card -->
+                        <div class="p-6 flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-slate-100 shadow-inner">
+                                    <img src="${post.userAvatar}" alt="${post.userName}" class="w-full h-full object-cover" />
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">${post.userName}</h4>
+                                    <p class="text-[10px] text-slate-400 font-bold tracking-wider">${post.timestamp}</p>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">Sua casa, um novo conceito.</h3>
-                            <p class="text-indigo-200/70 text-sm font-light leading-relaxed mb-6">Explore o portfólio dos melhores profissionais do mercado.</p>
-                            <button id="view-categories" class="bg-white text-indigo-950 px-6 py-2.5 rounded-xl font-black text-xs uppercase tracking-wider btn-animate shadow-xl shadow-white/5">
-                                Ver Todas Categorias
+                            <button 
+                                class="w-8 h-8 flex items-center justify-center bg-slate-50 text-slate-400 rounded-full 
+                                       hover:bg-indigo-100 hover:text-indigo-600 transition-colors scale-90 hover:scale-100">
+                                <span class="text-xs font-bold">➔</span>
                             </button>
                         </div>
-                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div>
-                        <div class="absolute top-0 right-0 p-8 text-6xl opacity-10 select-none">🏠</div>
-                    </div>
 
-                    <!-- Posts List -->
-                    <div class="space-y-10">
-                        ${MOCK_POSTS.map(post => `
-                            <article class="bg-white/80 backdrop-blur-md rounded-[2rem] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-white hover:shadow-[0_25px_60px_rgba(79,70,229,0.1)] transition-all duration-500">
-                                <!-- Header Card -->
-                                <div class="p-6 flex justify-between items-center">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-slate-100 shadow-sm">
-                                            <img src="${post.userAvatar}" alt="${post.userName}" class="w-full h-full object-cover" />
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 text-sm">${post.userName}</h4>
-                                            <p class="text-[10px] text-slate-400 font-bold tracking-wider">${post.timestamp}</p>
-                                        </div>
-                                    </div>
-                                    <button class="w-8 h-8 flex items-center justify-center bg-slate-50 text-slate-400 rounded-full hover:bg-indigo-50 hover:text-indigo-600 transition-colors btn-animate">
-                                        <span class="text-xs font-bold">➔</span>
-                                    </button>
-                                </div>
-                                
-                                <!-- Content Body -->
-                                <div class="px-6 pb-4">
-                                    <p class="text-slate-600 text-sm leading-relaxed font-normal">${post.content}</p>
-                                </div>
+                        <!-- Content Body -->
+                        <div class="px-6 pb-4">
+                            <p class="text-slate-600 text-sm leading-relaxed font-normal">
+                                ${post.content}
+                            </p>
+                        </div>
 
-                                <!-- Image Section -->
-                                ${post.image ? `
-                                    <div class="mx-4 mb-4 rounded-2xl overflow-hidden border border-slate-50 relative group">
-                                        <img src="${post.image}" alt="Service" class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-700" />
-                                    </div>
-                                ` : ''}
+                        <!-- Image Section -->
+                        ${post.image ? `
+                            <div class="mx-4 mb-4 rounded-[1.4rem] overflow-hidden border border-slate-100 relative group">
+                                <img src="${post.image}" alt="Service"
+                                     class="w-full h-[300px] object-cover group-hover:scale-[1.06] transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition"></div>
+                            </div>
+                        ` : ''}
 
-                                <!-- Actions Bar -->
-                                <div class="px-6 py-4 bg-slate-50/50 flex items-center justify-between border-t border-slate-50">
-                                    <div class="flex items-center gap-5">
-                                        <button class="flex items-center gap-1.5 btn-animate group/btn">
-                                            <span class="text-lg transition-transform group-hover/btn:scale-125">❤️</span>
-                                            <span class="text-[11px] font-black text-slate-400">${post.likes}</span>
-                                        </button>
-                                        <button class="flex items-center gap-1.5 btn-animate group/btn">
-                                            <span class="text-lg transition-transform group-hover/btn:scale-125">💬</span>
-                                            <span class="text-[11px] font-black text-slate-400">${post.comments}</span>
-                                        </button>
-                                    </div>
-                                    
-                                    <button class="request-service-btn bg-slate-900 text-white px-4 py-2 rounded-lg font-bold text-[10px] uppercase tracking-wider btn-animate shadow-md">
-                                        Solicitar
-                                    </button>
-                                </div>
-                            </article>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
+                        <!-- Actions Bar -->
+                        <div class="px-6 py-4 bg-slate-50/60 flex items-center justify-between 
+                                    border-t border-slate-100/50 backdrop-blur-md">
+                            
+                            <div class="flex items-center gap-5">
+                                <button class="flex items-center gap-1.5 btn-animate group/btn">
+                                    <span class="text-lg transition-transform group-hover/btn:scale-125">❤️</span>
+                                    <span class="text-[11px] font-black text-slate-400">${post.likes}</span>
+                                </button>
+                                <button class="flex items-center gap-1.5 btn-animate group/btn">
+                                    <span class="text-lg transition-transform group-hover/btn:scale-125">💬</span>
+                                    <span class="text-[11px] font-black text-slate-400">${post.comments}</span>
+                                </button>
+                            </div>
+                            
+                            <button class="request-service-btn bg-indigo-600 text-white px-5 py-2 rounded-xl font-black 
+                                        text-[10px] uppercase tracking-wider shadow-md hover:bg-indigo-700 hover:-translate-y-1 
+                                        transition btn-animate">
+                                Solicitar Serviço
+                            </button>
+                        </div>
+
+                    </article>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
 
         function renderCategories() {
             return `
