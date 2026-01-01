@@ -12,28 +12,32 @@ const usuarios = [
         servicos: ["limpeza geral", "engomação", "organização"],
         desc: "Profissional dedicado com 5 anos de experiência em serviços domésticos.",
         avaliacaEstrela: "⭐⭐⭐⭐",
-        quantAvaliacao: 223
+        quantAvaliacao: 223,
+        img: "../css/perfil.jpg"
     },
     {
         nome: "Ana Silva",
         servicos: ["cuidado de crianças", "cozinha"],
         desc: "Profissional dedicado com 5 anos de experiência em serviços domésticos.",
         avaliacaEstrela: "⭐⭐⭐⭐",
-        quantAvaliacao: 281
+        quantAvaliacao: 281,
+        img: "../css/perfil.jpg"
     },
     {
         nome: "João Mateus",
         servicos: ["jardinagem", "manutenção"],
         desc: "Profissional dedicado com 5 anos de experiência em serviços domésticos.",
         avaliacaEstrela: "⭐⭐",
-        quantAvaliacao: 153
+        quantAvaliacao: 153,
+        img: "../css/perfil.jpg"
     },
     {
         nome: "Paula Rocha",
         servicos: ["limpeza profunda", "lavagem de tapetes"],
         desc: "Profissional dedicado com 5 anos de experiência em serviços domésticos.",
         avaliacaEstrela: "⭐⭐⭐",
-        quantAvaliacao: 127
+        quantAvaliacao: 127,
+        img: "../css/perfil.jpg"
     }
 ];
 
@@ -57,7 +61,8 @@ for (let index = 0; index < usuarios.length; index++) {
                 servico: usuarios[index].servicos[c],
                 desc: usuarios[index].desc,
                 avaliacaoEstrela: usuarios[index].avaliacaEstrela,
-                quantAvaliacao: usuarios[index].quantAvaliacao
+                quantAvaliacao: usuarios[index].quantAvaliacao,
+                img: usuarios[index].img
             });
         }
     }
@@ -71,7 +76,7 @@ for (let i = 0; i < resu.length; i++) {
             
             <div class="resu_servico" id="resu_servico">
                 <div class="perfil">
-                    <img src="" alt="Foto de perfil">
+                    <img src="${resu[i].img}" alt="${resu[i].nome}">
                     <h3 class="nome">${resu[i].nome}</h3>
                 </div>
 
@@ -83,7 +88,7 @@ for (let i = 0; i < resu.length; i++) {
                 <button class="contratar" id="contratar">Contratar</button>
 
                 <div class="avaliacao">
-                    <span>${resu[i].avaliacaEstrela}</span>
+                    <span>${resu[i].avaliacaoEstrela}</span>
                     <span class="num_avaliacao">(${resu[i].quantAvaliacao} avaliações)</span>
                 </div>
             </div>`;
