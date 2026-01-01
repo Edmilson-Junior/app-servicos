@@ -1,0 +1,253 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Cabeçalho e filhos */
+
+/* HEADER */
+header {
+    width: 100%;
+    background: #22236e; /* azul empresarial */
+    padding: 14px 16px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAV */
+.menu_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* BOTÃO MENU */
+.menu {
+    width: 32px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* LINHAS DO HAMBÚRGUER */
+.menu i {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+.menu i:nth-child(1) {
+    top: 0;
+}
+
+.menu i:nth-child(2) {
+    bottom: 0;
+}
+
+/* LISTA DO MENU */
+.lista {
+    position: fixed;
+    top: 56px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background: linear-gradient(180deg, #0f172a, #020617);
+    list-style: none;
+    padding: 40px 24px;
+    transition: 0.4s ease;
+}
+
+/* ITENS */
+.lista li {
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-transform: capitalize;
+}
+
+/* ESTADO ATIVO */
+.menu.ativo i:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.menu.ativo i:nth-child(2) {
+    transform: rotate(-45deg);
+    bottom: 10px;
+}
+
+.menu.ativo .lista {
+    right: 0;
+}
+
+
+/* main */
+
+main {
+    padding: 90px 16px 24px; /* espaço por causa do header fixo */
+    background: #f8fafc;
+    min-height: 80vh;
+}
+
+/* TEXTO PRINCIPAL */
+main p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 54px;
+    font-weight: 500;
+}
+
+/* DESTAQUES */
+.destaque {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+/* BOX DE PESQUISA */
+.pesquisa_box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+/* INPUT */
+.pesquisa_box input {
+    flex: 1;
+    padding: 14px 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    transition: 0.3s;
+}
+
+.pesquisa_box input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+}
+
+/* BOTÃO */
+.btn_pesquisa {
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_pesquisa:active {
+    transform: scale(0.96);
+}
+
+/* SUGESTÕES */
+.sugestoes_servicos {
+    margin-top: 10px;
+}
+
+/* LISTA FLEX */
+.sugestoes_servicos ul {
+    background-color: #e1e6eb94;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    overflow: scroll;
+    height: 9rem;
+}
+
+/* TAGS DE SERVIÇO */
+.sugestoes_servicos li {
+    padding: 10px 14px;
+    background: #ffffff;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    color: #0f172a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sugestoes_servicos li:hover {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+
+/* RODAPÉ */
+.rodape {
+    background: linear-gradient(180deg, #020617, #0f172a);
+    padding: 32px 16px 24px;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+/* CONTACTOS */
+.contactos {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* ICONES */
+.contactos span {
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* EFEITO HOVER / TOQUE */
+.contactos span:active {
+    background: #4f46e5;
+    transform: scale(0.92);
+}
+
+/* TEXTO */
+.rodape p {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
