@@ -1,7 +1,88 @@
+/* Serviços */
+
 .servicos{
     margin-top: 2rem;
-    height: 70vh;
-    background-color: brown;
+}
+
+/* TÍTULO */
+h2 {
+    margin: 90px 16px 16px;
+    font-size: 1.4rem;
+    color: #0f172a;
+}
+
+/* CARD */
+.resu_servico {
+    background: #ffffff;
+    margin: 0 16px 24px;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* PERFIL */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* FOTO */
+.perfil img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    object-fit: cover;
+}
+
+/* NOME */
+.nome {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: capitalize;
+}
+
+/* DESCRIÇÃO */
+.descricao {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* BOTÃO CONTRATAR */
+.contratar {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contratar:active {
+    transform: scale(0.96);
+}
+
+/* AVALIAÇÃO */
+.avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.num_avaliacao {
+    font-size: 0.8rem;
 }
 
 

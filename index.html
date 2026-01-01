@@ -28,10 +28,10 @@
             Encontre o profissional perfeito para o seu <span class="destaque">Negocio</span> , <span class="destaque">Problema de Trabalho</span> ou <span class="destaque">Seviço Domestico</span>
         </p>
 
-        <div class="pesquisa_box">
-            <input type="text" id="input_pesquisa" placeholder="Qual é o serviço que você precisa?">
-            <button class="btn_pesquisa" id="btn_pesquisa">Procurar</button>
-        </div>
+        <form action="frontend/html/sevicos.html" method="get" class="pesquisa_box">
+            <input type="text" id="input_pesquisa" name="input_pesquisa" placeholder="Qual é o serviço que você precisa?">
+            <button type="submit" class="btn_pesquisa" id="btn_pesquisa">Procurar</button>
+        </form >
 
         <div class="sugestoes_servicos">
             <ul id="lista_servicos">
@@ -84,8 +84,6 @@
             });
         });
     </script>
-
-    <script src="frontend/js/encontrar_servico.js"></script>
 
 </body>
 </html>
