@@ -45,7 +45,7 @@ const usuarios = [
 
 const resultadosServico = document.getElementById("servicos");
 
-resultadosServico.innerHTML = "";
+resultadosServico.innerHTML = `<h2>Resultados da pesquisa para "${texto}"</h2>`;
 
 const resu = [];
 
@@ -68,7 +68,7 @@ for (let i = 0; i < resu.length; i++) {
     div.className = "card_usuario";
 
     div.innerHTML = `
-            <h2>Resultados da pesquisa para "${texto}"</h2>
+            
             <div class="resu_servico" id="resu_servico">
                 <div class="perfil">
                     <img src="" alt="Foto de perfil">
@@ -88,7 +88,7 @@ for (let i = 0; i < resu.length; i++) {
                 </div>
             </div>`;
 
-    resultadosServico.innerHTML += div;
+    resultadosServico.innerHTML += div.outerHTML;
 }
 
 

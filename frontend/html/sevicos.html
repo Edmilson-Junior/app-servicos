@@ -15,7 +15,7 @@
                 <i></i>
                 <i></i>
                 <ol class="lista">
-                    <li>inicio</li>
+                    <li><a href="">Inicio</a></li>
                     <li>pesquisar</li>
                     <li>servicos</li>
                     <li>profissionais</li>
@@ -29,6 +29,8 @@
     </section>
     
     <footer class="rodape">
+        <button onclick="abrirPagina()">Voltar</button>
+
         <div class="contactos" id="contactos">
             <span><i class="fi fi-brands-facebook"></i></span>
             <span><i class="fi fi-brands-instagram"></i></span>
@@ -49,7 +51,10 @@
             menu.classList.toggle("ativo");
         });
 
-        
+        function abrirPagina() {
+            window.location.href = "../../index.html";
+        }
+
     </script>
 
     <script src="../js/encontrar_servico.js"></script>
