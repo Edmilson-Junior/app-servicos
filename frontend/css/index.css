@@ -200,6 +200,21 @@ main p {
     text-align: center;
 }
 
+.btn_voltar{
+    padding: 5px;
+    width: 80px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+}
+
 /* CONTACTOS */
 .contactos {
     display: flex;
